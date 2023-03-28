@@ -1,0 +1,448 @@
+<?xml version="1.0" ?>
+<robot name="hand" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find hand_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find hand_description)/urdf/hand.trans" />
+<xacro:include filename="$(find hand_description)/urdf/hand.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.0 0.0 0.04059887632407671" rpy="0 0 0"/>
+    <mass value="7.1785523034220695"/>
+    <inertia ixx="0.013714" iyy="0.013714" izz="0.011784" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hand_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hand_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="palm_1">
+  <inertial>
+    <origin xyz="-0.005914617900261412 0.00037729563091550624 0.0866626904719881" rpy="0 0 0"/>
+    <mass value="3.1025400256133953"/>
+    <inertia ixx="0.005278" iyy="0.009998" izz="0.004986" ixy="9.1e-05" iyz="1.5e-05" ixz="-0.000171"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.12" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hand_description/meshes/palm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.12" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hand_description/meshes/palm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="P1_1">
+  <inertial>
+    <origin xyz="-0.0075 0.024999999999999994 1.0158540675320182e-14" rpy="0 0 0"/>
+    <mass value="0.11868347996639739"/>
+    <inertia ixx="2.1e-05" iyy="7e-06" izz="2.1e-05" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.053 0.0 -0.285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hand_description/meshes/P1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.053 0.0 -0.285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hand_description/meshes/P1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="R1_1">
+  <inertial>
+    <origin xyz="-0.007499999999999977 0.02499999999999997 1.0158540675320182e-14" rpy="0 0 0"/>
+    <mass value="0.11868347996639744"/>
+    <inertia ixx="2.1e-05" iyy="7e-06" izz="2.1e-05" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.023 0.0 -0.285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hand_description/meshes/R1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.023 0.0 -0.285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hand_description/meshes/R1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="M1_1">
+  <inertial>
+    <origin xyz="-0.007499590955043892 0.024999999999999897 1.0158540675320182e-14" rpy="0 0 0"/>
+    <mass value="0.1186834799663969"/>
+    <inertia ixx="2.1e-05" iyy="7e-06" izz="2.1e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.008191 0.0 -0.285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hand_description/meshes/M1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.008191 0.0 -0.285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hand_description/meshes/M1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="I1_1">
+  <inertial>
+    <origin xyz="-0.00749989105614049 0.024999999999999963 1.0158540675320182e-14" rpy="0 0 0"/>
+    <mass value="0.11868347996639722"/>
+    <inertia ixx="2.1e-05" iyy="7e-06" izz="2.1e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.04081 0.0 -0.285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hand_description/meshes/I1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.04081 0.0 -0.285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hand_description/meshes/I1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="T1_1">
+  <inertial>
+    <origin xyz="-0.004240749228645091 0.02124494204261544 -0.002231975045458773" rpy="0 0 0"/>
+    <mass value="0.0863152601245754"/>
+    <inertia ixx="1.2e-05" iyy="5e-06" izz="1.1e-05" ixy="0.0" iyz="-1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.085106 -0.014549 -0.210278" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hand_description/meshes/T1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.085106 -0.014549 -0.210278" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hand_description/meshes/T1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="I2_1">
+  <inertial>
+    <origin xyz="0.007500108943859496 -1.3877787807814457e-17 -0.01999999999999591" rpy="0 0 0"/>
+    <mass value="0.12114963019946477"/>
+    <inertia ixx="1.5e-05" iyy="1.6e-05" izz="1e-05" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.05581 -0.05 -0.285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hand_description/meshes/I2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.05581 -0.05 -0.285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hand_description/meshes/I2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="M2_1">
+  <inertial>
+    <origin xyz="0.007500409044956101 -1.3877787807814457e-16 -0.019999999999995854" rpy="0 0 0"/>
+    <mass value="0.12114963019946477"/>
+    <inertia ixx="1.5e-05" iyy="1.6e-05" izz="1e-05" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.023191 -0.05 -0.285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hand_description/meshes/M2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.023191 -0.05 -0.285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hand_description/meshes/M2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="R2_1">
+  <inertial>
+    <origin xyz="0.0075000000000000466 -1.1796119636642288e-16 -0.019999999999995854" rpy="0 0 0"/>
+    <mass value="0.12114963019946477"/>
+    <inertia ixx="1.5e-05" iyy="1.6e-05" izz="1e-05" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.008 -0.05 -0.285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hand_description/meshes/R2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.008 -0.05 -0.285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hand_description/meshes/R2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="P2_1">
+  <inertial>
+    <origin xyz="0.0075 -2.7755575615628914e-17 -0.019999999999995854" rpy="0 0 0"/>
+    <mass value="0.12114963019946477"/>
+    <inertia ixx="1.5e-05" iyy="1.6e-05" izz="1e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.038 -0.05 -0.285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hand_description/meshes/P2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.038 -0.05 -0.285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hand_description/meshes/P2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="P3_1">
+  <inertial>
+    <origin xyz="-0.007499999999999993 1.0422218643668657e-13 -0.022926738733067747" rpy="0 0 0"/>
+    <mass value="0.11012879346184722"/>
+    <inertia ixx="1.5e-05" iyy="1.5e-05" izz="7e-06" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.053 -0.05 -0.245" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hand_description/meshes/P3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.053 -0.05 -0.245" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hand_description/meshes/P3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="R3_1">
+  <inertial>
+    <origin xyz="-0.007499999999999953 -1.0438871989038034e-13 -0.022926738733067775" rpy="0 0 0"/>
+    <mass value="0.11012879346184722"/>
+    <inertia ixx="1.5e-05" iyy="1.5e-05" izz="7e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.023 -0.05 -0.245" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hand_description/meshes/R3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.023 -0.05 -0.245" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hand_description/meshes/R3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="M3_1">
+  <inertial>
+    <origin xyz="-0.007499590955043895 1.0411810302812796e-13 -0.022926738733067775" rpy="0 0 0"/>
+    <mass value="0.11012879346184722"/>
+    <inertia ixx="1.5e-05" iyy="1.5e-05" izz="7e-06" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.008191 -0.05 -0.245" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hand_description/meshes/M3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.008191 -0.05 -0.245" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hand_description/meshes/M3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="I3_1">
+  <inertial>
+    <origin xyz="-0.007499891056140483 -1.0429851426962955e-13 -0.022926738733067886" rpy="0 0 0"/>
+    <mass value="0.11012879346184722"/>
+    <inertia ixx="1.5e-05" iyy="1.5e-05" izz="7e-06" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.04081 -0.05 -0.245" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hand_description/meshes/I3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.04081 -0.05 -0.245" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hand_description/meshes/I3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="T2_1">
+  <inertial>
+    <origin xyz="0.004241250779561612 0.022239411600103447 0.010554123548223576" rpy="0 0 0"/>
+    <mass value="0.10596716477817673"/>
+    <inertia ixx="1.3e-05" iyy="7e-06" izz="1.3e-05" ixy="0.0" iyz="-1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.093588 -0.056162 -0.205646" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hand_description/meshes/T2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.093588 -0.056162 -0.205646" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://hand_description/meshes/T2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="PALM_JOINT" type="continuous">
+  <origin xyz="0.0 0.0 0.12" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="palm_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+</joint>
+
+<joint name="P_MCP" type="continuous">
+  <origin xyz="0.053 -0.0 0.165" rpy="0 0 0"/>
+  <parent link="palm_1"/>
+  <child link="P1_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="R_MCP" type="continuous">
+  <origin xyz="0.023 -0.0 0.165" rpy="0 0 0"/>
+  <parent link="palm_1"/>
+  <child link="R1_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="M_MCP" type="continuous">
+  <origin xyz="-0.008191 -0.0 0.165" rpy="0 0 0"/>
+  <parent link="palm_1"/>
+  <child link="M1_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="I_MCP" type="continuous">
+  <origin xyz="-0.04081 -0.0 0.165" rpy="0 0 0"/>
+  <parent link="palm_1"/>
+  <child link="I1_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="T_MCP" type="continuous">
+  <origin xyz="-0.085106 0.014549 0.090278" rpy="0 0 0"/>
+  <parent link="palm_1"/>
+  <child link="T1_1"/>
+  <axis xyz="-0.565462 0.15503 -0.810073"/>
+</joint>
+
+<joint name="I_PIP" type="continuous">
+  <origin xyz="-0.015 0.05 0.0" rpy="0 0 0"/>
+  <parent link="I1_1"/>
+  <child link="I2_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="M_PIP" type="continuous">
+  <origin xyz="-0.015 0.05 0.0" rpy="0 0 0"/>
+  <parent link="M1_1"/>
+  <child link="M2_1"/>
+  <axis xyz="-1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="R_PIP" type="continuous">
+  <origin xyz="-0.015 0.05 0.0" rpy="0 0 0"/>
+  <parent link="R1_1"/>
+  <child link="R2_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="P_PIP" type="continuous">
+  <origin xyz="-0.015 0.05 0.0" rpy="0 0 0"/>
+  <parent link="P1_1"/>
+  <child link="P2_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="P_DIP" type="continuous">
+  <origin xyz="0.015 0.0 -0.04" rpy="0 0 0"/>
+  <parent link="P2_1"/>
+  <child link="P3_1"/>
+  <axis xyz="-1.0 -0.0 0.0"/>
+</joint>
+
+<joint name="R_DIP" type="continuous">
+  <origin xyz="0.015 0.0 -0.04" rpy="0 0 0"/>
+  <parent link="R2_1"/>
+  <child link="R3_1"/>
+  <axis xyz="1.0 -0.0 0.0"/>
+</joint>
+
+<joint name="M_DIP" type="continuous">
+  <origin xyz="0.015 0.0 -0.04" rpy="0 0 0"/>
+  <parent link="M2_1"/>
+  <child link="M3_1"/>
+  <axis xyz="-1.0 0.0 -0.0"/>
+</joint>
+
+<joint name="I_DIP" type="continuous">
+  <origin xyz="0.015 0.0 -0.04" rpy="0 0 0"/>
+  <parent link="I2_1"/>
+  <child link="I3_1"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="T_DIP" type="continuous">
+  <origin xyz="-0.008482 0.041613 -0.004632" rpy="0 0 0"/>
+  <parent link="T1_1"/>
+  <child link="T2_1"/>
+  <axis xyz="0.565462 -0.15503 0.810073"/>
+</joint>
+
+</robot>
